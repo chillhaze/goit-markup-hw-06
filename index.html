@@ -70,7 +70,7 @@
             Эффективные решения<br />
             для вашего бизнеса
           </h1>
-          <button class="order-btn" data-modal-open>Заказать услугу</button>
+          <button class="order-btn btn" data-modal-open>Заказать услугу</button>
         </div>
       </section>
       <!-- Advantages Section -->
@@ -480,37 +480,55 @@
           </svg>
         </button>
         <div class="modal-content">
-          <p class="modal-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate,
-            qui necessitatibus odit alias fugiat porro illum neque tenetur,
-            cupiditate officia molestiae nemo in voluptatum! Iste ducimus
-            voluptate inventore velit, vel odio quae distinctio, recusandae,
-            animi illum accusantium aut cupiditate sit consequatur. Quibusdam
-            incidunt quisquam minus deserunt, nobis pariatur fuga accusantium
-            quae officia voluptatem! Alias saepe ea eum quae debitis quasi quas
-            aperiam fugit temporibus veritatis. Quos saepe neque pariatur
-            eligendi possimus expedita, quasi sapiente, perferendis minus
-            tenetur temporibus numquam id quae aut deserunt quia. Doloribus
-            corrupti nisi, unde aperiam, possimus consequuntur sequi repellat
-            quam necessitatibus mollitia non placeat ea molestiae odit, illo
-            eligendi. Dignissimos sit reprehenderit, quas vitae rem nulla culpa
-            quaerat recusandae atque a dolore doloremque soluta error aspernatur
-            omnis nisi excepturi voluptatibus est at ipsum consequatur animi
-            labore, aperiam sapiente? Ut ipsum eveniet quibusdam ratione cumque
-            magni at numquam sint animi consequatur necessitatibus dolor
-            officiis, impedit labore maiores hic doloribus ex voluptates
-            doloremque quod nostrum culpa blanditiis maxime expedita? Earum
-            ratione aperiam facilis libero optio, id ipsum iste. Quis assumenda
-            ex repellendus iure numquam dicta natus facilis doloribus accusamus
-            reiciendis ab illum, quisquam fugit, ducimus quia. Dolor ad
-            exercitationem perspiciatis recusandae nihil voluptas facere nisi
-            quos laborum dignissimos!
-          </p>
+          <h3 class="modal-title">Оставьте свои данные, мы вам перезвоним</h3>
+          <form class="modal-form">
+            <label for="user-name">Имя</label>
+            <input
+              class="form-input"
+              type="text"
+              name="user-name"
+              id="user-name"
+            />
+
+            <label for="tel">Телефон</label>
+            <input class="form-input" type="tel" name="tel" id="tel" />
+
+            <label for="mail">Почта</label>
+            <input class="form-input" type="email" name="mail" id="mail" />
+
+            <label for="comment">Комментарий</label>
+            <input class="form-input" type="text" name="comment" id="comment" />
+
+            <input
+              class="checkbox"
+              type="checkbox"
+              name="conditions"
+              value="conditions submited"
+              id="conditions"
+            />
+            <label class="checkbox-label" for="conditions">
+              Соглашаюсь с рассылкой и принимаю
+              <a href="" class="checkbox-link"> Условия договора </a>
+            </label>
+
+            <button class="form-btn btn" type="submit">Отправить</button>
+          </form>
         </div>
       </div>
     </div>
 
     <!-- Modal JS -->
     <script src="./js/modal.js"></script>
+    <script>
+      (() => {
+        document.querySelector('.modal-form').addEventListener('submit', e => {
+          e.preventDefault();
+
+          new FormData(e.currentTarget).forEach((value, name) =>
+            console.log(`${name}: ${value}`),
+          );
+        });
+      })();
+    </script>
   </body>
 </html>
