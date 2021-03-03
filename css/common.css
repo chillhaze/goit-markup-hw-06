@@ -366,13 +366,10 @@ footer .social-icon {
   padding: 10px 29px;
 }
 
-.btn-inner {
-  display: flex;
-  justify-content: center;
-}
-
 .subscribe-icon {
   margin-left: 10px;
+  vertical-align: middle;
+
   fill: var(--font-color-white);
 }
 
@@ -582,16 +579,12 @@ footer .social-icon {
 
   font-size: 14px;
   line-height: 1.714;
-
   letter-spacing: 0.03em;
-
-  color: #757575;
 
   cursor: pointer;
 }
 
 .checkbox-icon {
-  position: relative;
   margin-right: 7px;
 
   width: 16px;
@@ -611,15 +604,11 @@ footer .social-icon {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
 
-  background-size: contain;
-  background-origin: border-box;
-}
+  /* background-size: contain;
+  background-origin: border-box; */
 
-/* .check-svg {
-  position: absolute;
-  top: -2px;
-  left: -2px;
-} */
+  border: none;
+}
 
 .checkbox-link {
   color: var(--accent-color);
