@@ -468,6 +468,21 @@
             </li>
           </ul>
         </div>
+        <div class="footer-form">
+          <h2 class="footer-title">Подпишитесь на рассылку</h2>
+
+          <label class="footer-form-label">
+            <input
+              class="form-input"
+              type="email"
+              name="mail"
+              placeholder="E-mail"
+            />
+          </label>
+          <a class="btn subscribe-btn" type="submit">
+            <div class="btn-text">Подписаться</div>
+          </a>
+        </div>
       </div>
     </footer>
 
@@ -482,36 +497,62 @@
         <div class="modal-content">
           <h3 class="modal-title">Оставьте свои данные, мы вам перезвоним</h3>
           <form class="modal-form">
-            <label for="user-name">Имя</label>
-            <input
-              class="form-input"
-              type="text"
-              name="user-name"
-              id="user-name"
-            />
+            <div class="form-field">
+              <label class="form-label" for="user-name">Имя</label>
+              <input
+                class="form-input"
+                type="text"
+                name="user-name"
+                id="user-name"
+              />
+              <svg class="input-icon">
+                <use href="./images/sprite.svg#icon-form-user" />
+              </svg>
+            </div>
 
-            <label for="tel">Телефон</label>
-            <input class="form-input" type="tel" name="tel" id="tel" />
+            <div class="form-field">
+              <label class="form-label" for="tel">Телефон</label>
+              <input class="form-input" type="tel" name="tel" id="tel" />
+              <svg class="input-icon">
+                <use href="./images/sprite.svg#icon-form-phone" />
+              </svg>
+            </div>
 
-            <label for="mail">Почта</label>
-            <input class="form-input" type="email" name="mail" id="mail" />
+            <div class="form-field">
+              <label class="form-label" for="mail">Почта</label>
+              <input class="form-input" type="email" name="mail" id="mail" />
+              <svg class="input-icon">
+                <use href="./images/sprite.svg#icon-form-mail" />
+              </svg>
+            </div>
 
-            <label for="comment">Комментарий</label>
-            <input class="form-input" type="text" name="comment" id="comment" />
+            <div class="form-field">
+              <label class="form-label" for="comment">Комментарий</label>
+              <textarea
+                class="form-comment"
+                name="comment"
+                id="comment"
+                placeholder="Введите текст"
+              >
+              </textarea>
+            </div>
 
-            <input
-              class="checkbox"
-              type="checkbox"
-              name="conditions"
-              value="conditions submited"
-              id="conditions"
-            />
-            <label class="checkbox-label" for="conditions">
-              Соглашаюсь с рассылкой и принимаю
-              <a href="" class="checkbox-link"> Условия договора </a>
-            </label>
-
-            <button class="form-btn btn" type="submit">Отправить</button>
+            <div class="form-field checkbox-field">
+              <label class="form-label checkbox-label">
+                <input
+                  class="checkbox-input"
+                  type="checkbox"
+                  name="conditions"
+                  value="conditions submited"
+                />
+                <span class="checkbox-icon"></span>
+                Соглашаюсь с рассылкой и принимаю&nbsp;
+                <a href="" class="checkbox-link"> Условия договора </a>
+              </label>
+            </div>
+            <div class="form-submit">
+              <button class="btn form-btn" type="submit">Отправить</button>
+            </div>
           </form>
         </div>
       </div>

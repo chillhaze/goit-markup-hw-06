@@ -142,7 +142,6 @@
   color: var(--font-color-white);
   background-color: var(--accent-color-op09);
 
-  overflow: auto;
   transform: translateY(100%);
 
   transition-property: transform, background-color, color;
