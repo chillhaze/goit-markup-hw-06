@@ -386,7 +386,8 @@ footer .social-icon {
   background-color: var(--backdrop-op02);
   pointer-events: none;
 
-  transition-property: opacity, visibility;
+  transform: rotate(0deg);
+  transition-property: opacity, visibility, transform;
   transition-duration: var(--transiton-duration-time);
   transition-timing-function: var(--timing-fn);
 }
@@ -396,7 +397,9 @@ footer .social-icon {
 
   visibility: hidden;
 
-  transition-property: opacity, visibility;
+  transform: rotate(15deg);
+
+  transition-property: opacity, visibility, transform;
   transition-duration: var(--transiton-duration-time);
   transition-timing-function: var(--timing-fn);
 }
