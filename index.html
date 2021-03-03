@@ -479,9 +479,14 @@
               placeholder="E-mail"
             />
           </label>
-          <a class="btn subscribe-btn" type="submit">
-            <div class="btn-text">Подписаться</div>
-          </a>
+          <button class="btn subscribe-btn" type="submit">
+            <div class="btn-inner">
+              Подписаться
+              <svg class="subscribe-icon" width="24" height="24">
+                <use href="./images/sprite.svg#icon-paper-plane" />
+              </svg>
+            </div>
+          </button>
         </div>
       </div>
     </footer>
@@ -533,19 +538,22 @@
                 name="comment"
                 id="comment"
                 placeholder="Введите текст"
-              >
-              </textarea>
+              ></textarea>
             </div>
 
             <div class="form-field checkbox-field">
               <label class="form-label checkbox-label">
                 <input
-                  class="checkbox-input"
+                  class="checkbox-input visually-hidden"
                   type="checkbox"
                   name="conditions"
                   value="conditions submited"
                 />
-                <span class="checkbox-icon"></span>
+                <span class="checkbox-icon">
+                  <svg class="check-svg" width="16" height="15">
+                    <use href="./images/sprite.svg#icon-check" />
+                  </svg>
+                </span>
                 Соглашаюсь с рассылкой и принимаю&nbsp;
                 <a href="" class="checkbox-link"> Условия договора </a>
               </label>
