@@ -3,7 +3,7 @@
   outline: none;
 }
 
-.btn {
+.filter-btn {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -21,9 +21,9 @@
   cursor: pointer;
 }
 
-.btn:active,
-.btn:hover,
-.btn:focus {
+.filter-btn:active,
+.filter-btn:hover,
+.filter-btn:focus {
   color: var(--font-color-white);
 
   background-color: var(--accent-color);
@@ -50,7 +50,7 @@
   margin: 0 4px;
 }
 
-.btn {
+.filter-btn {
   padding: 6px 22px;
   border: 0px solid transparent;
 }
@@ -156,4 +156,11 @@
   transition-property: transform, background-color, color;
   transition-duration: var(--transiton-duration-time);
   transition-timing-function: var(--timing-fn);
+}
+
+.subscribe-btn {
+  display: inline-block;
+  align-items: center;
+  margin-left: 12px;
+  padding: 10px 29px;
 }

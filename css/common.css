@@ -47,6 +47,7 @@ button {
   --font-color-black: #000;
   --accent-color: #2196f3;
   --accent-color-op09: rgba(33, 149, 243, 0.9);
+  --bg-colour-button-hover: #188ce8;
   --border-color: #ececec;
   --social-link-color: #afb1b8;
   --btn-boxshadow-color: rgba(0, 0, 0, 0.15);
@@ -462,18 +463,19 @@ footer .social-icon {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
-  text-align: center;
   letter-spacing: 0.03em;
+  text-align: center;
 
   color: var(--font-color-main);
 }
 
-.form-field {
-  position: relative;
-  margin-top: 10px;
-
+.modal-form {
   display: flex;
   flex-direction: column;
+}
+
+.form-field {
+  margin-top: 10px;
 }
 
 .form-field:first-child {
@@ -481,6 +483,7 @@ footer .social-icon {
 }
 
 .form-label {
+  display: inline-block;
   margin-bottom: 4px;
 
   font-size: 12px;
@@ -494,9 +497,13 @@ footer .social-icon {
   margin-bottom: 0;
 }
 
+.input-wrapper {
+  position: relative;
+}
+
 .form-input {
-  height: 40px;
-  padding-left: 42px;
+  width: 100%;
+  padding: 12px 12px 12px 42px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -513,7 +520,7 @@ footer .social-icon {
 
 .form-comment {
   resize: none;
-  height: 120px;
+  min-height: 120px;
   width: 100%;
 
   padding: 12px 16px;
@@ -544,6 +551,8 @@ footer .social-icon {
   top: 50%;
   left: 12px;
 
+  transform: translateY(-50%);
+
   width: 20px;
   height: 20px;
 
@@ -565,17 +574,13 @@ footer .social-icon {
 /* -----Checkbox styles----- */
 
 .checkbox-field {
-  align-items: center;
-
   margin-top: 20px;
-
-  text-align: center;
-  line-height: 1.714;
 }
 
 .checkbox-label {
   display: flex;
   align-items: center;
+  justify-content: center;
 
   font-size: 14px;
   line-height: 1.714;
@@ -594,6 +599,10 @@ footer .social-icon {
   border-radius: 2px;
 
   fill: var(--font-color-white);
+
+  transition-property: fill, background-color, border-color;
+  transition-duration: var(--transiton-duration-time);
+  transition-timing-function: var(--timing-fn);
 }
 
 .checkbox-input:focus + .checkbox-icon {
@@ -604,10 +613,7 @@ footer .social-icon {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
 
-  /* background-size: contain;
-  background-origin: border-box; */
-
-  border: none;
+  border: 0px solid transparent;
 }
 
 .checkbox-link {
@@ -626,4 +632,13 @@ footer .social-icon {
   padding-right: 55px;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition-property: background-color;
+  transition-duration: var(--transiton-duration-time);
+  transition-timing-function: var(--timing-fn);
+}
+
+.form-btn:hover,
+.form-btn:focus {
+  background-color: var(--bg-colour-button-hover);
 }
